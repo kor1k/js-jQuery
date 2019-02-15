@@ -1,12 +1,12 @@
-// function f() {
-//    let a = confirm('hello world');
-//     if (a === true){
-//         alert('Okay')
-//     } else {
-//         alert('Not Okay!')
-//     }
-// }
-// f();
-//
-alert('asdasdasda');
-jQuery("h1").css("color", "green");
+// console.dir($('.item')[3]);
+// console.dir(document.querySelectorAll('.item'));
+
+$(document).ready(function () {
+    $('.item').click(function () {
+        console.log($(this));
+        $('.active').removeClass('active');
+        $(this).addClass('active');
+        alert(`index is ${$('div').index(this)}`)
+        // $('.item:last-child').addClass('active')
+    })
+});
