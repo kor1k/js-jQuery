@@ -3,10 +3,16 @@
 
 $(document).ready(function () {
     $('.item').click(function () {
-        console.log($(this));
-        $('.active').removeClass('active');
-        $(this).addClass('active');
-        alert(`index is ${$('div').index(this)}`)
-        // $('.item:last-child').addClass('active')
+        if (!$(this).hasClass('active')){
+            console.log($(this));
+            $('.active').removeClass('active');
+            $(this).addClass('active');
+            alert(`index is ${$('.item').index(this)+1}`)
+            // $('.item:last-child').addClass('active')
+        }
+        $('.wrapper').slick({
+            slidesToShow: 3
+        })
     })
 });
+
