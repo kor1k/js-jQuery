@@ -2,53 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>jquery-JS</title>
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="http://kenwheeler.github.io/slick/slick/slick-theme.css">
     <style>
         .wrapper {
-            margin-top: 5rem;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            /*display: flex;*/
+            /*flex-wrap: wrap;*/
+            width: 430px;
+            margin: 0 auto;
         }
-
         .item {
             width: 100px;
             height: 100px;
-            background: yellow;
-            margin-right: 10px;
+            background-color: green;
+            /*margin: 0 10px 10px 0;*/
+            text-align: center;
+            font-size: 32px;
+            color: #fff;
         }
-
-        .item:last-child {
-            padding-right: 0;
+        .item:nth-child(4n) {
+            margin-right: 0;
         }
-
-        .active {
-            margin-top: 5rem;
-            transition: .4s;
-            background: red ;
-            width: 200px;
-            height: 100px;
+        .item:nth-last-child( -n  + 4) {
+            margin-bottom: 0;
+        }
+        .active{
+            background-color: red;
+        }
+        .slick-prev, .slick-next {
+            background-color: black;
+        }
+        .masonry .item {
+            margin: 5px;
+        }
+        .masonry .item:nth-child(odd) {
+            height: 150px;
+        }
+        .masonry .item:nth-child(3n) {
+            height: 175px;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
 <div class="wrapper">
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+    <div class="item">11</div>
+    <div class="item">12</div>
 </div>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
-<script src="js/script.js"></script>
+<div class="masonry">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+    <div class="item">11</div>
+    <div class="item">12</div>
+</div>
+
 </body>
 </html>
