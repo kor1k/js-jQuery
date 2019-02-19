@@ -5,77 +5,80 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="http://kenwheeler.github.io/slick/slick/slick-theme.css">
-    <style>
-        .wrapper {
-            /*display: flex;*/
-            /*flex-wrap: wrap;*/
-            width: 430px;
-            margin: 0 auto;
-        }
-        .item {
-            text-align: center;
-            width: 100px;
-            height: 100px;
-            background-color: green;
-            /*margin: 0 10px 10px 0;*/
-            text-align: center;
-            font-size: 32px;
-            color: #fff;
-        }
-        .item:nth-child(4n) {
-            margin-right: 0;
-        }
-        .item:nth-last-child( -n  + 4) {
-            margin-bottom: 0;
-        }
-        .active{
-            background-color: red;
-        }
-        .slick-prev, .slick-next {
-            background-color: black;
-        }
-        .masonry .item {
-            text-align: center;
-            margin: 5px;
-        }
-        .masonry .item:nth-child(odd) {
-            height: 150px;
-        }
-        .masonry .item:nth-child(3n) {
-            height: 175px;
-        }
-    </style>
 </head>
+<style>
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.6);
+    }
+    .overlay.show {
+        display: block;
+    }
+    #modal {
+        width: 400px;
+        height: 200px;
+        background-color: grey;
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 99;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: none;
+    }
+    #modal.open {
+        display: block;
+    }
+    .close {
+        text-decoration: none;
+        position: absolute;
+        top: 5px;
+        right: 7px;
+        color: #00aaaa;
+    }
+    #modal h3 {
+        text-align: center;
+    }
+    #form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #form input {
+        margin: 5px;
+    }
+    body {
+        background-color: rgba(70,191,63,0.4);
+    }
+</style>
 <body>
-<div class="wrapper">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-    <div class="item">5</div>
-    <div class="item">6</div>
-    <div class="item">7</div>
-    <div class="item">8</div>
-    <div class="item">9</div>
-    <div class="item">10</div>
-    <div class="item">11</div>
-    <div class="item">12</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet aperiam asperiores beatae commodi dolorem
+    dolorum ducimus ipsam, minima mollitia necessitatibus nihil officiis quae quaerat quasi quia ratione, sint, sunt
+    unde voluptate! Deleniti dolorum maxime odio quas tempore. Commodi consequuntur debitis, et excepturi explicabo
+    fugiat ipsum iste libero maxime modi quibusdam quidem rem, repellendus velit voluptas! Esse incidunt, laborum
+    laudantium mollitia nisi obcaecati odio, odit quae quidem quis suscipit velit? Accusamus alias beatae commodi
+    consectetur corporis culpa cupiditate, dolores ducimus eius, hic in iste iure modi nam nesciunt nostrum pariatur rem
+    repellat repellendus repudiandae tempora totam ullam unde. Accusamus, accusantium.</p>
+<button id="open-modal">open modal</button>
+<div class="overlay"></div>
+<div id="modal">
+    <a class="close" href="#">&#x2715;</a>
+    <form id="form" action="#">
+        <h3>Leave us your email and we will contact you</h3>
+        <input type="text" placeholder="Your name">
+        <input type="text" placeholder="Your email">
+        <input type="submit" value="Get in touch">
+    </form>
 </div>
-<div class="masonry">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-    <div class="item">5</div>
-    <div class="item">6</div>
-    <div class="item">7</div>
-    <div class="item">8</div>
-    <div class="item">9</div>
-    <div class="item">10</div>
-    <div class="item">11</div>
-    <div class="item">12</div>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script src="js/script.js"></script>
